@@ -190,7 +190,7 @@ def header():
     W_, H_ = 1200, 360
     HZ = 268
     rng = random.Random(2077)
-    s = SVG(W_, H_, 'JOSH14MAX — netrunner-class DevOps and vibe-coder')
+    s = SVG(W_, H_, 'JOSH14MAX — netrunner-class vibe-coder')
     scan_defs(s)
     s.defs.append(
         f'<radialGradient id="gR" cx="50%" cy="50%" r="55%"><stop offset="0" stop-color="{R}" stop-opacity=".22"/>'
@@ -273,7 +273,7 @@ def header():
     s.add(f'<rect width="{W_}" height="{H_}" fill="url(#vig)"/>')
 
     # tag plates under the title
-    left_t, right_t = 'DEVOPS // NETRUNNER-CLASS', 'VIBE-CODER'
+    left_t, right_t = 'VIBE-CODER // NETRUNNER-CLASS', 'SHIPS AT AI SPEED'
     PS, PL = 19, 2.6
     wl = FONTS['semi'].width(left_t, PS, PL)
     wr = FONTS['semi'].width(right_t, PS, PL)
@@ -290,10 +290,10 @@ def header():
     # top HUD
     s.add(f'<path d="M40 22 L54 22 L40 36 Z" fill="{Y}"/>')
     s.text('SYS://JOSEPH-MARIE', 62, 36, 'mono', 17, fill=Y, ls=1.5)
-    s.text('EPITECH NANTES · PRE-MSC · GAP YEAR 26/27', 62, 55, 'mono', 12.5, fill=G, ls=1)
+    s.text('FREELANCE · OPEN FOR GIGS', 62, 55, 'mono', 12.5, fill=G, ls=1)
     s.text('NANTES // FR', 1138, 36, 'mono', 17, fill=W, ls=1.5, anchor='end')
     s.add(f'<circle class="blink" cx="1154" cy="30.5" r="5" fill="{C}"/>')
-    s.text('UPLINK STABLE · NODE jojoserver', 1160, 55, 'mono', 12.5, fill=G, ls=1, anchor='end')
+    s.text('UPLINK STABLE · AI CO-PILOT ONLINE', 1160, 55, 'mono', 12.5, fill=G, ls=1, anchor='end')
     bx = 528
     bars = []
     while bx < 672:
@@ -314,7 +314,7 @@ def header():
     # bottom HUD
     s.add(f'<rect x="32" y="328" width="440" height="24" fill="{BG}" opacity=".75"/>',
           f'<rect x="900" y="328" width="268" height="24" fill="{BG}" opacity=".75"/>')
-    s.text('BUILD 2026.11 // K3S · DOCKER · TERRAFORM · AWS', 40, 345, 'mono', 13.5, fill=C, ls=1)
+    s.text('STACK // VUE · REACT · SUPABASE · CURSOR · CLAUDE', 40, 345, 'mono', 13.5, fill=C, ls=1)
     w_, _ = s.t('[ SCROLL TO JACK IN ]', 0, 0, 'mono', 13.5, ls=1.5)[1:]
     frag = s.t('[ SCROLL TO JACK IN ]', 1160, 345, 'mono', 13.5, fill=Y, ls=1.5, anchor='end')[0]
     s.add(f'<g class="blink">{frag}</g>')
@@ -363,23 +363,22 @@ def terminal():
     cw = MONO_ADV * FS
     X0 = 48
     TOP = 96
-    PROMPT = 'jm@jojoserver'
+    PROMPT = 'jm@neon-deck'
     LINES = [
         ('cmd', 'whoami'),
-        ('out', [('Joseph-Marie', Y), (' // DevOps apprentice-netrunner · Epitech Nantes (pre-MSc)', W)]),
+        ('out', [('Joseph-Marie', Y), (' // freelance vibe-coder · netrunner-class', W)]),
         ('cmd', 'cat /etc/role'),
-        ('out', [('Network DevOps apprentice', W), (' @ ', G), ('Bureau Veritas', Y), ('  ·  Terraform · AWS · network eng.', G)]),
-        ('cmd', 'kubectl get nodes'),
-        ('out', [('NAME         STATUS   ROLES', G)]),
-        ('out', [('jojoserver   ', W), ('Ready', C), ('    control-plane', W)]),
+        ('out', [('Freelance vibe-coder', W), ('  ·  ', G), ('web apps · e-commerce · AI automations', Y)]),
+        ('cmd', 'ls ~/shipped'),
+        ('out', [('nghair/', C), ('   ', W), ('aspire/', C), ('   ', W), ('ai-mail-agent/', C), ('   ', W), ('spam-detector/', C)]),
         ('cmd', 'cat mission.txt'),
-        ('out', [('Build infra that heals itself. Ship products at AI speed. Own every line.', W)]),
-        ('cmd', 'echo $CURRENT_QUEST'),
-        ('out', [('gap-year 26/27', R), (' :: ', G), ('DevOps > Cloud', W), (' :: ', G), ('LFCS > CKA > Terraform > AWS SAA', Y)]),
+        ('out', [('Turn ideas into shipped products at AI speed. Own every line.', W)]),
+        ('cmd', 'echo $STATUS'),
+        ('out', [('open for gigs', R), (' :: ', G), ('MVPs · landing pages · e-commerce · automations', Y)]),
         ('prompt', ''),
     ]
     H_ = TOP + LH * len(LINES) + 34
-    s = SVG(W_, H_, 'Terminal: whoami — Joseph-Marie, DevOps apprentice and vibe-coder')
+    s = SVG(W_, H_, 'Terminal: whoami — Joseph-Marie, freelance vibe-coder')
     scan_defs(s, 0.28)
     s.defs.append('<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">'
                   f'<rect width="1.5" height="1.5" fill="{G}" opacity=".18"/></pattern>')
@@ -389,7 +388,7 @@ def terminal():
     s.add(f'<path d="{notch(8, 8, W_-16, H_-16, 22, ("tl","br"))}" fill="{PANEL}" stroke="{Y}" stroke-width="1.6"/>')
     s.add(f'<path d="{notch(8, 8, W_-16, H_-16, 22, ("tl","br"))}" fill="url(#dots)"/>')
     s.add(f'<path d="M8 30 L30 8 L{W_-8} 8 L{W_-8} 50 L8 50 Z" fill="{Y}"/>')
-    s.text('jm@jojoserver: ~  —  zsh  —  120×32', 52, 36, 'mono', 16, fill=BG, ls=1)
+    s.text('jm@neon-deck: ~  —  zsh  —  120×32', 52, 36, 'mono', 16, fill=BG, ls=1)
     for i, x in enumerate([1112, 1138, 1164]):
         s.add(f'<rect x="{x}" y="21" width="16" height="16" fill="none" stroke="{BG}" stroke-width="2"/>')
     s.add(f'<line x1="{1166}" y1="23" x2="{1178}" y2="35" stroke="{BG}" stroke-width="2"/>'
@@ -477,13 +476,17 @@ def terminal():
 def arsenal():
     W_ = 1200
     ROWS = [
+        ('VIBE-CODE STACK', [('Cursor', 0), ('Claude', 0), ('Bolt.new', 0)]),
+        ('LANGUAGES', [('HTML', 0), ('TypeScript', 0), ('Python', 0), ('Java', 0)]),
+        ('FRONT-END', [('Vue.js', 0), ('Vuetify', 0), ('React', 0), ('Vite', 0), ('Tailwind', 0)]),
+        ('BACK-END / AI', [('Supabase', 0), ('FastAPI', 0), ('MLflow', 0), ('Gemini API', 0)]),
+        ('AUTOMATION', [('Zapier', 0), ('Make', 0)]),
         ('INFRA // CORE', [('Linux', 0), ('Docker', 0), ('K3s', 0), ('Kubernetes', 0), ('Traefik', 0), ('Ansible', 0), ('Terraform', 0)]),
-        ('CI / CD', [('GitHub Actions', 0), ('Jenkins', 0), ('Drone CI', 0), ('Gitea', 0), ('Git', 0)]),
+        ('CLOUD & DEPLOY', [('Vercel', 0), ('DigitalOcean', 0), ('AWS', 1), ('Terraform on AWS', 1)]),
+        ('CI / CD', [('GitHub Actions', 0), ('GitLab CI', 0), ('Jenkins', 0), ('Drone CI', 0), ('ArgoCD', 0), ('Gitea', 0), ('Git', 0)]),
         ('OBSERVABILITY', [('Prometheus', 0), ('Grafana', 0), ('cAdvisor', 0)]),
-        ('CLOUD', [('AWS', 1), ('Terraform on AWS', 1)]),
-        ('VIBE-CODE STACK', [('Cursor', 0), ('Claude', 0), ('React', 0), ('TypeScript', 0), ('Vite', 0), ('Tailwind', 0), ('Supabase', 0), ('Vercel', 0)]),
         ('NETWORK / SEC', [('TCP/IP', 1), ('Subnetting', 0), ('Kali Linux', 0), ('Exegol', 0)]),
-        ('MLOPS LAB', [('Python', 0), ('MLflow', 0)]),
+        ('TOOLS', [('VS Code', 0), ('Lens', 0)]),
     ]
     QUEUE = ['LFCS', 'CKA', 'Terraform Associate', 'AWS SAA']
     LX, CX0, CX1 = 44, 300, 1156
@@ -506,8 +509,8 @@ def arsenal():
         layout.append((label, y if not row else row[0][3], row))
         y += rowgap
     qy = y + 22
-    H_ = qy + 110
-    s = SVG(W_, H_, 'Loadout: DevOps, cloud, CI/CD, observability and vibe-coding stack')
+    H_ = (qy + 110) if QUEUE else (y + 4)
+    s = SVG(W_, H_, 'Loadout: technical skills and vibe-coding stack')
     scan_defs(s, 0.25)
     s.defs.append(f'<linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{C}" stop-opacity="0"/>'
                   f'<stop offset=".5" stop-color="{C}" stop-opacity=".12"/><stop offset="1" stop-color="{C}" stop-opacity="0"/></linearGradient>')
@@ -532,7 +535,16 @@ def arsenal():
                     + s.t(name, x + PADX, y + 25.5, 'semi', FS, fill=fill, ls=0.6)[0])
             s.add(chip)
 
-    # upgrade queue
+    if QUEUE:
+        _queue(s, QUEUE, LX, CX0, CH, PADX, FS, qy, W_)
+
+    s.add(f'<rect class="sw" x="0" y="18" width="180" height="{H_-26}" fill="url(#sw)"/>')
+    s.add(f'<path d="{frame}" fill="url(#scan)"/>')
+    s.save('arsenal.svg')
+
+
+def _queue(s, QUEUE, LX, CX0, CH, PADX, FS, qy, W_):
+    # upgrade queue (optional: certification targets)
     s.add(f'<line x1="{LX}" y1="{qy-20}" x2="{W_-44}" y2="{qy-20}" stroke="{G2}" stroke-dasharray="2 6"/>')
     s.text('UPGRADE QUEUE', LX + 32, qy + 25, 'mono', 15, fill=R, ls=1.6)
     s.add(f'<rect class="blink" x="{LX}" y="{qy+13}" width="12" height="12" fill="{R}"/>')
@@ -554,10 +566,6 @@ def arsenal():
     s.text('LEARNING', LX + 152, ly, 'mono', 12.5, fill=G, ls=1.5)
     s.add(f'<rect x="{LX+262}" y="{ly-11}" width="22" height="13" fill="none" stroke="{R}" stroke-width="1.3" stroke-dasharray="4 2"/>')
     s.text('CERT TARGET', LX + 294, ly, 'mono', 12.5, fill=G, ls=1.5)
-
-    s.add(f'<rect class="sw" x="0" y="18" width="180" height="{H_-26}" fill="url(#sw)"/>')
-    s.add(f'<path d="{frame}" fill="url(#scan)"/>')
-    s.save('arsenal.svg')
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -641,7 +649,7 @@ def card(slug, idx, title, status, scol, sub, desc, tags, accent):
     # status pill
     sw = FONTS['mono'].width(status, 13, 1.5) + 40
     sx = W_ - 170 - sw
-    solid = status in ('LIVE', 'ONLINE')
+    solid = status in ('LIVE', 'ONLINE', 'SHIPPED')
     s.add(f'<path d="{notch(sx, 24, sw, 26, 7)}" fill="{scol if solid else "none"}" stroke="{scol}" stroke-width="1.3"/>')
     s.add(f'<circle class="blink" cx="{sx+15}" cy="37" r="4" fill="{BG if solid else scol}"/>')
     s.text(status, sx + 27, 42, 'mono', 13, fill=BG if solid else scol, ls=1.5)
@@ -728,15 +736,15 @@ if __name__ == '__main__':
     card('ng-hair', '0x01', 'NG HAIR', 'LIVE', Y, 'vibe-coded e-commerce · in production',
          'Wig store built AI-first. Mobile-money checkout (Wave, Orange Money) with HMAC-verified webhooks and an in-house back-office.',
          ['React', 'TypeScript', 'Supabase', 'Vercel'], Y)
-    card('jojoserver', '0x02', 'JOJOSERVER', 'ONLINE', C, 'self-hosted homelab · bare metal',
-         'A recycled PC turned cluster: K3s behind Traefik, self-hosted Git and CI, a full metrics stack, provisioned as code.',
-         ['K3s', 'Ansible', 'Terraform', 'Grafana'], C)
-    card('aspire', '0x03', 'ASPIRE', 'IN DEV', R, 'create-launch · ship-ready web app',
+    card('aspire', '0x02', 'ASPIRE', 'IN DEV', R, 'create-launch · ship-ready web app',
          'Launch pipeline for a web product: transactional emails, legal pages, error tracking and end-to-end tests.',
          ['E2E tests', 'Monitoring', 'Email'], R)
-    card('spam-detector', '0x04', 'SPAM DETECTOR', 'R&D', G, 'mlops lab · experiment tracking',
-         'Spam classifier with tracked experiments and model versions, plus an experimental Gmail × Gemini automation.',
-         ['Python', 'MLflow', 'Gemini API'], Y)
+    card('ai-mail-agent', '0x03', 'AI MAIL AGENT', 'SHIPPED', C, 'ai automation · inbox on autopilot',
+         'Incoming Gmail triggers Gemini 2.5 Pro, which drafts the reply and sends it back automatically, orchestrated with Zapier.',
+         ['Gmail API', 'Gemini', 'Zapier'], C)
+    card('spam-detector', '0x04', 'SPAM DETECTOR', 'LAB', G, 'ai lab · nlp classifier',
+         'NLP model flagging spam SMS with 97% accuracy, served as a real-time REST API with every training run tracked.',
+         ['Python', 'FastAPI', 'MLflow'], Y)
     button('linkedin', 'LINKEDIN', 'professional uplink', C)
     button('mail', 'MAIL', 'direct line · drop a signal', Y)
     button('hire', 'HIRE ME', 'freelance vibe-code gigs', R)

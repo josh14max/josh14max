@@ -7,12 +7,12 @@
 -->
 
 <div align="center">
-  <img src="./assets/header.svg" width="100%" alt="JOSH14MAX — netrunner-class DevOps and vibe-coder" />
+  <img src="./assets/header.svg" width="100%" alt="JOSH14MAX — netrunner-class vibe-coder" />
 </div>
 
 <p align="center">
-  <b>DevOps apprentice by day, vibe-coder by night.</b><br/>
-  I build the pipes — containers, clusters, CI/CD — then I ship the products that flow through them.
+  <b>Vibe-coder. Ideas in, shipped products out.</b><br/>
+  I build web apps, e-commerce and AI automations at AI speed — and I make sure they hold up in production.
 </p>
 
 <br/>
@@ -20,7 +20,7 @@
 <img src="./assets/sec-01-whoami.svg" width="100%" alt="01 // WHOAMI" />
 
 <div align="center">
-  <img src="./assets/terminal.svg" width="100%" alt="whoami: Joseph-Marie, DevOps apprentice at Bureau Veritas, Epitech Nantes pre-MSc, homelab jojoserver on K3s, on a DevOps to Cloud quest (LFCS, CKA, Terraform, AWS SAA)" />
+  <img src="./assets/terminal.svg" width="100%" alt="whoami: Joseph-Marie, freelance vibe-coder — web apps, e-commerce and AI automations" />
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 <img src="./assets/sec-02-arsenal.svg" width="100%" alt="02 // ARSENAL" />
 
 <div align="center">
-  <img src="./assets/arsenal.svg" width="100%" alt="Loadout — Infra: Linux, Docker, K3s, Kubernetes, Traefik, Ansible, Terraform · CI/CD: GitHub Actions, Jenkins, Drone CI, Gitea · Observability: Prometheus, Grafana · Cloud: AWS (learning) · Vibe-code: Cursor, Claude, React, TypeScript, Vite, Tailwind, Supabase, Vercel · Net/Sec: subnetting, Kali, Exegol · MLOps: Python, MLflow" />
+  <img src="./assets/arsenal.svg" width="100%" alt="Loadout — Vibe-code: Cursor, Claude, Bolt.new · Languages: HTML, TypeScript, Python, Java · Front-end: Vue.js, Vuetify, React, Vite, Tailwind · Back-end/AI: Supabase, FastAPI, MLflow, Gemini API · Automation: Zapier, Make · Infra: Linux, Docker, K3s, Kubernetes, Traefik, Ansible, Terraform · Cloud: Vercel, DigitalOcean, AWS (learning) · CI/CD: GitHub Actions, GitLab CI, Jenkins, Drone CI, ArgoCD, Gitea · Observability: Prometheus, Grafana, cAdvisor · Net/Sec: TCP/IP, subnetting, Kali, Exegol · Cert queue: LFCS, CKA, Terraform Associate, AWS SAA" />
 </div>
 
 <br/>
@@ -45,11 +45,11 @@
 
 <p align="center">
   <a href="https://nghair.link"><img src="./assets/card-ng-hair.svg" width="49%" alt="NG HAIR — vibe-coded e-commerce in production" /></a>
-  <a href="https://github.com/josh14max?tab=repositories"><img src="./assets/card-jojoserver.svg" width="49%" alt="JOJOSERVER — self-hosted K3s homelab" /></a>
+  <a href="https://github.com/josh14max/aspire-create-launch"><img src="./assets/card-aspire.svg" width="49%" alt="ASPIRE — create-launch, ship-ready web app" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/josh14max/aspire-create-launch"><img src="./assets/card-aspire.svg" width="49%" alt="ASPIRE — create-launch, ship-ready web app" /></a>
-  <a href="https://github.com/josh14max?tab=repositories"><img src="./assets/card-spam-detector.svg" width="49%" alt="SPAM DETECTOR — MLOps lab with MLflow" /></a>
+  <a href="https://github.com/josh14max?tab=repositories"><img src="./assets/card-ai-mail-agent.svg" width="49%" alt="AI MAIL AGENT — Gmail + Gemini auto-replies orchestrated with Zapier" /></a>
+  <a href="https://github.com/josh14max?tab=repositories"><img src="./assets/card-spam-detector.svg" width="49%" alt="SPAM DETECTOR — NLP spam classifier served as a REST API" /></a>
 </p>
 
 <br/>
