@@ -1,0 +1,39 @@
+# Génère le serpent néon qui mange le graphe de contributions,
+# puis le publie sur la branche "output" (référencée par le README).
+name: neon-snake
+
+on:
+  schedule:
+    - cron: "17 4 * * *"      # tous les jours à 04:17 UTC
+  workflow_dispatch:          # bouton "Run workflow" dans l'onglet Actions
+  push:
+    branches: [main]
+
+permissions:
+  contents: write             # nécessaire pour pousser sur la branche output
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate neon snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # 1re couleur = 0 contribution, puis du plus faible au plus fort (5 couleurs exactement)
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=#f3e600&color_dots=#161b22,#3d0b1f,#7d1236,#c81d4f,#ff2a6d
+            dist/snake-light.svg?palette=github-light&color_snake=#0a0a12&color_dots=#ebedf0,#b5f6fb,#55e6f2,#00c4d6,#008a99
+
+      - name: Push to output branch
+        working-directory: dist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -q -b output
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -q -m "neon-snake: refresh $(date -u +%F)"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
